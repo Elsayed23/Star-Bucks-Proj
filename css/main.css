@@ -1,0 +1,228 @@
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+/* End Global Rules */
+/* Start Header */
+.header {
+    padding: 15px;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .container .logo img {
+    width: 80px;
+    cursor: pointer;
+}
+.header .container ul {
+    display: flex;
+    gap: 15px;
+}
+.header .container ul li {
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    text-transform: capitalize;
+}
+.header .container ul li::before {
+    content: '';
+    width: 0;
+    height: 1.5px;
+    position: absolute;
+    transition: .4s;
+    left: 50%;
+    bottom: 5px;
+    background-color: #017143;
+}
+.header .container ul li:hover::before {
+    width: calc(100% - 30px);
+    left: 15px;
+
+}
+/* End Header */
+/* Start Home */
+.HO {
+    height: calc(100vh - 114px);
+    padding-top: 100px;
+}
+.HO .container {
+    display: flex;
+}
+.HO .container .content h1 {
+    font-size: 55px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    line-height: 1.3;
+}
+.HO .container .content h1 span {
+    color: #017143;
+    font-weight: bolder;
+    font-size: 70px;
+}
+.HO .container .content p {
+    max-width: 550px;
+    line-height: 1.7;
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.HO .container .content button {
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    background-color: #017143;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    transition: .4s;
+}
+.HO .container .content button:hover {
+    background-color: #333;
+}
+.HO .container .drink img {
+    max-width: 340px;
+    position: absolute;
+    right: 190px;
+    bottom: 110px;
+}
+.HO::before {
+    content: '';
+    position: absolute;
+    right: -20%;
+    bottom: -51%;
+    background-color: #017143;
+    width: 900px;
+    BORDER-TOP-RIGHT-RADIUS: 50%;
+    border-top-left-radius: 70%;
+    border-bottom-left-radius: 57%;
+    height: 900px;
+}
+.HO .options {
+    display: flex;
+    position: absolute;
+    gap: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+.HO .options img {
+    max-width: 60px;
+    cursor: pointer;
+    transition: .4s;
+    max-height: 87px;
+}
+.HO .options img:hover {
+    max-width: 70px;
+    max-height: 100px;
+}
+/* End Home */
+@media (min-width: 992px) and (max-width: 1199px){
+    .HO::before {
+        right: -33%;
+    }
+    .HO .container .drink img {
+        right: 95px;
+    }
+}
+@media (min-width: 767px) and (max-width: 992px) {
+    .HO::before {
+        bottom: -98%;
+        width: 100%;
+        border-radius: 50%;
+        right: 0;
+        height: 942px;
+    }
+    .HO .container .drink img {
+        right: -7px;
+    }
+}
+@media (max-width: 767px) {
+    .HO::before {
+        bottom: -123px;
+        width: 100%;
+        BORDER-TOP-RIGHT-RADIUS: 92px;
+        border-top-left-radius: 92px;
+        border-bottom-left-radius: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 117px;
+    }
+    body {
+        overflow: scroll;
+    }
+    .HO .options {
+        display: flex;
+        position: absolute;
+        gap: 30px;
+        height: fit-content;
+        left: 50%;
+        top: 25%;  
+    }
+    .HO .container .drink img {
+        max-width: 140px;
+        left: 50%;
+        bottom: -127px;
+        transform: translateX(-50%);
+    }
+    .HO .container .content h1 {
+        font-size: 30px;
+    }
+    .HO .container .content h1 span {
+        font-size: 43px;
+    }
+    .header .container ul {
+        gap: 0;
+    }
+    .header .container ul li {
+        font-size: 16.5px;
+    }
+    .header .container {
+        flex-direction: column;
+    }
+}

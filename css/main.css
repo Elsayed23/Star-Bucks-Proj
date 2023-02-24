@@ -184,7 +184,7 @@ a {
 }
 @media (max-width: 767px) {
     .HO::before {
-        bottom: -123px;
+        bottom: -131px;
         width: 100%;
         BORDER-TOP-RIGHT-RADIUS: 92px;
         border-top-left-radius: 92px;
